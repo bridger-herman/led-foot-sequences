@@ -1,0 +1,13 @@
+{
+  "color_points": [
+    {"r": 1.0, "g": 0.0, "b": 0.117, "w": 0.1},
+    {"r": 1.0, "g": 0.0, "b": 0.117, "w": 0.1}
+  ],
+  "percent_points": [0.0, 1.0],
+  "info": {
+    "sequence_type": "Color",
+    "name": "Pink",
+    "duration": 0.0,
+    "repeat": false
+  }
+}

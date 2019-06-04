@@ -1,0 +1,13 @@
+{
+  "color_points": [
+    {"r": 0.8, "g": 0.07, "b": 0.0, "w": 0.5},
+    {"r": 0.8, "g": 0.07, "b": 0.0, "w": 0.5}
+  ],
+  "percent_points": [0.0, 1.0],
+  "info": {
+    "sequence_type": "Color",
+    "name": "Orange",
+    "duration": 0.0,
+    "repeat": false
+  }
+}

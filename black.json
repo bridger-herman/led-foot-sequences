@@ -1,0 +1,13 @@
+{
+  "color_points": [
+    {"r": 0.0, "g": 0.0, "b": 0.0, "w": 0.0},
+    {"r": 0.0, "g": 0.0, "b": 0.0, "w": 0.0}
+  ],
+  "percent_points": [0.0, 1.0],
+  "info": {
+    "sequence_type": "Color",
+    "name": "Black",
+    "duration": 0.0,
+    "repeat": false
+  }
+}
