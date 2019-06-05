@@ -12,6 +12,6 @@
     "sequence_type": "Gradient",
     "name": "Cools",
     "duration": 20.0,
-    "repeat": false
+    "repeat": true
   }
 }

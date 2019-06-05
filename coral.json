@@ -1,0 +1,14 @@
+{
+  "color_points": [
+    {"r": 0.953, "g": 0.447, "b": 0.165, "w": 0.302},
+    {"r": 0.953, "g": 0.447, "b": 0.165, "w": 0.302}
+  ],
+  "percent_points": [0.0, 1.0],
+  "info": {
+    "sequence_type": "Color",
+    "name": "Coral",
+    "duration": 0.0,
+    "repeat": false
+  }
+}
+
