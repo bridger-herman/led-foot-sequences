@@ -1,3 +1,5 @@
+from colormath.color_objects import sRGBColor, LabColor
+from colormath.color_conversions import convert_color
 from os import listdir
 from pathlib import Path
 from fnmatch import fnmatch
@@ -11,12 +13,28 @@ HEIGHT = 100
 def lerp_component(low, high, percent):
     return (high - low) * percent + low
 
+def clamp_component(component):
+    if component > 1.0:
+        return 1.0
+    elif component < 0.0:
+        return 0.0
+    else:
+        return component
+
 class Color:
     def __init__(self, r, g, b, w):
         self.r = r
         self.g = g
         self.b = b
         self.w = w
+
+    def clamped(self):
+        return Color(
+                clamp_component(self.r),
+                clamp_component(self.g),
+                clamp_component(self.b),
+                clamp_component(self.w),
+        )
 
     def from_dict(d):
         return Color(
@@ -27,10 +45,23 @@ class Color:
         )
 
     def lerp(self, other, percent):
+        self_rgb = sRGBColor(self.r, self.g, self.b)
+        other_rgb = sRGBColor(other.r, other.g, other.b)
+        self_lab = convert_color(self_rgb, LabColor)
+        other_lab = convert_color(other_rgb, LabColor)
+
+        result_lab = LabColor(
+                lerp_component(self_lab.lab_l, other_lab.lab_l, percent),
+                lerp_component(self_lab.lab_a, other_lab.lab_a, percent),
+                lerp_component(self_lab.lab_b, other_lab.lab_b, percent),
+        )
+
+        result_rgb = convert_color(result_lab, sRGBColor)
+
         return Color(
-                lerp_component(self.r, other.r, percent),
-                lerp_component(self.g, other.g, percent),
-                lerp_component(self.b, other.b, percent),
+                clamp_component(result_rgb.rgb_r),
+                clamp_component(result_rgb.rgb_g),
+                clamp_component(result_rgb.rgb_b),
                 lerp_component(self.w, other.w, percent),
         )
 
