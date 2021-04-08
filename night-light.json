@@ -1,0 +1,13 @@
+{
+  "color_points": [
+    {"r": 0.005, "g": 0.001, "b": 0.0, "w": 0.0},
+    {"r": 0.005, "g": 0.001, "b": 0.0, "w": 0.0}
+  ],
+  "percent_points": [0.0, 1.0],
+  "info": {
+    "sequence_type": "Color",
+    "name": "Night Light",
+    "duration": 0.0,
+    "repeat": false
+  }
+}
