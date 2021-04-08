@@ -36,6 +36,7 @@ class Color:
                 clamp_component(self.w),
         )
 
+    @staticmethod
     def from_dict(d):
         return Color(
                 d['r'],
