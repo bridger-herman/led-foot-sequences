@@ -1,0 +1,13 @@
+{
+  "color_points": [
+    {"r": 1.0, "g": 0.6, "b": 0.4, "w": 1.0},
+    {"r": 1.0, "g": 0.6, "b": 0.4, "w": 1.0}
+  ],
+  "percent_points": [0.0, 1.0],
+  "info": {
+    "sequence_type": "Color",
+    "name": "3Cheese",
+    "duration": 0.0,
+    "repeat": false
+  }
+}
